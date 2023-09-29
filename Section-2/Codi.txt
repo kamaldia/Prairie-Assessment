@@ -1,0 +1,62 @@
+exercise 3
+
+CREATE TABLE "Mentor" (
+	"SSN"	INTEGER NOT NULL UNIQUE,
+	"First name"	TEXT NOT NULL,
+	"Last name"	TEXT NOT NULL,
+	"DOB"	INTEGER NOT NULL,
+	"Seniority level"	TEXT NOT NULL,
+	"Salary"	INTEGER NOT NULL,
+	"office"	TEXT NOT NULL,
+	"Topic specialty"	TEXT NOT NULL,
+	PRIMARY KEY("SSN" AUTOINCREMENT)
+); //using not null for all since no instruction about that, used auto incriment for primary key to generate it automatically
+
+CREATE TABLE "Student" (
+	"Student number" INTEGER NOT NULL UNIQUE,
+	"SSN" INTEGER NOT NULL UNIQUE,
+	"First name" TEXT NOT NULL,
+	"Last name" TEXT NOT NULL,
+	"DOB" INTEGER NOT NULL,
+	"Several skills" NOT NULL,
+	PRIMARY KEY("Student number" AUTOINCREMENT, "SSN" AUTOINCREMENT)
+);
+
+CREATE TABLE "Cohort" (
+	"ID" INTEGER NOT NULL UNIQUE
+	"Number" INTEGER NOT NULL UNIQUE
+	"Start" TEXT NOT NULL
+	"End" TEXT NOT NULL
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+CREATE TABLE "Topic" (
+	"ID" INTEGER NOT NULL UNIQUE
+	"Title" TEXT NOT NULL
+	"Description" TEXT NOT NULL
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+CREATE TABLE "Department" (
+	"ID" INTEGER NOT NULL UNIQUE
+	"Name" TEXT	NOT NULL
+	"Office" TEXT NOT NULL
+	"Topic specialty" TEXT NOT NULL
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+exercise 4
+
+SELECT First name FROM Mentor
+
+SELECT first name from mentor(
+	where office = 333
+)
+
+SELECT first name from mentor(
+	where salary > 1000
+)
+
+SELECT first name from mentor(
+	where salary > 1000 and rank... // no time code is sudo
+)
